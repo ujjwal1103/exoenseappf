@@ -18,7 +18,7 @@ const Register = () => {
   const handleSubmit= async(e)=>{
     e.preventDefault()
     try{
-        const res = await axios.post("https://expenseapp-p9wl.onrender.com/api/auth/register",user)
+        const res = await axios.post("https://expenseapp-p9wl.onrender.com/api/auth/register",user, { mode: 'cors' })
         if(res){
             setError("")
             alert(res.data)
