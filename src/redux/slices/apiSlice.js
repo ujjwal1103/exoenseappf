@@ -3,7 +3,7 @@ export const transactionApi = createApi({
   reducerPath: "transactions",
   tagTypes: ["transactions"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3001/api/transactions/",
+    baseUrl: "https://expenseapr.onrender.com/api/transactions/",
   }),
   endpoints: (builder) => ({
     getAllTransactions: builder.query({

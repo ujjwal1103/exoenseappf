@@ -6,7 +6,7 @@ import {
 
 import ExpenseInfo from "./ExpenseInfo.jsx";
 const Expenses = () => {
-  // const [balanceInfo, setBalanceInfo] = useState(false);
+
   const { data: user } = JSON.parse(localStorage.getItem("user"));
   const [deleteTransaction] = useDeleteTransactionMutation();
   const {

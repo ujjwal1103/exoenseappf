@@ -31,7 +31,7 @@ export function getExpensesThunk(userId) {
       }
       else{
         const res = await axios.get(
-          `http://localhost:8000/api/transactions/get/${userId}`
+          `https://expenseapr.onrender.com/api/transactions/get/${userId}`
         );
         console.log(res.data);
         dispatch(setExpenses(res.data));
@@ -45,7 +45,7 @@ export function addexpense(expense) {
   return async function addex(dispatch) {
     try {
       await axios.post(
-        "http://localhost:8000/api/transactions/add/transaction",
+        "https://expenseapr.onrender.com/api/transactions/add/transaction",
         expense
       );
       dispatch(addExp(expense));
@@ -58,7 +58,7 @@ export function deleteExpenses(userId) {
   return async function addex(dispatch) {
     try {
       await axios.delete(
-        `http://localhost:8000/api/transactions/delete/${userId}`
+        `https://expenseapr.onrender.com/api/transactions/delete/${userId}`
       );
       dispatch(deleteAll(initialState.data))
     } catch (err) {
