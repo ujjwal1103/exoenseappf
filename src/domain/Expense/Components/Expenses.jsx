@@ -3,10 +3,10 @@ import {
   useDeleteTransactionMutation,
   useGetAllTransactionsQuery,
 } from "../../../redux/slices/apiSlice";
-import { useState } from "react";
+
 import ExpenseInfo from "./ExpenseInfo.jsx";
 const Expenses = () => {
-  const [balanceInfo, setBalanceInfo] = useState(false);
+  // const [balanceInfo, setBalanceInfo] = useState(false);
   const { data: user } = JSON.parse(localStorage.getItem("user"));
   const [deleteTransaction] = useDeleteTransactionMutation();
   const {
@@ -30,7 +30,7 @@ const Expenses = () => {
 
   return (
     <div className="p-10 w-full flex flex-col    ">
-     {balanceInfo && <ExpenseInfo expenses={expenses} />}
+     <ExpenseInfo expenses={expenses} />
       <div className=" mt-20 flex items-center scrollbar-thumb-transparent scrollbar-thin  scrollbar-track-transparent overflow-y-scroll justify-center flex-col ">
         {!expenses
           ? "No transactions Initiated"
