@@ -33,7 +33,7 @@ const Login = () => {
 
   return (
     <div className="w-screen h-screen flex justify-center items-center bg-gray-100">
-        <div className='p-3 w-[30%] bg-white shadow-md rounded'>
+        <div className='w-full lg:p-3  lg:w-[30%] bg-white shadow-md rounded'>
             <form className='w-full p-3'>
                 <div className='w-full flex flex-col my-2 p-3 justify-center items-center text-2xl font-bold'>
                     <h1>Login to ExpenseTrack</h1>
