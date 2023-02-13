@@ -3,9 +3,7 @@
   padding: 0;
   box-sizing: border-box
 }
-body{
-  background-color: rgb(180, 255, 199);
-}
+
 input[type="number"]::-webkit-inner-spin-button,
   input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;

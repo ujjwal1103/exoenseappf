@@ -18,7 +18,7 @@ const Home = () => {
         </>
       ) : (
         <div className="flex  justify-center items-center h-screen w-screen   ">
-          <div className="flex border p-32 bg-[#ffffff38] backdrop-blur-lg shadow-md justify-center items-center flex-col gap-8 ">
+          <div className="flex border p-32 bg-[#ffffff] backdrop-blur-lg shadow-md justify-center items-center flex-col gap-8 ">
             <h1 className="text-center text-3xl font-bold ">
               Login To Expense Track
             </h1>
