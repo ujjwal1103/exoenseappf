@@ -7,6 +7,7 @@ import axios from "axios";
 const Register = () => {
 
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const {
     register,
     handleSubmit,
@@ -26,12 +27,11 @@ const Register = () => {
         const res = await axios.post("https://expenseapp-p9wl.onrender.com/api/auth/register",data, { mode: 'cors' })
        
         if(res){
-            console.log(res)
             navigate("/login")
         }
     }
     catch(err){
-       console.log("error")
+       setError("error")
     }
     finally{
         setLoading(false)
@@ -117,6 +117,9 @@ const Register = () => {
              {loading?"loading..." :"Register"}
             </button>
           </div>
+          {error && 
+              <span className="font-medium text-red-500 text-sm pt-2">{error}</span>
+           }
           <div className="w-full flex flex-col my-2  items-center ">
             <span>
               don't have an account?{" "}

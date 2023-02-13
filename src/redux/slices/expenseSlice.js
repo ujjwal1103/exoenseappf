@@ -33,7 +33,7 @@ export function getExpensesThunk(userId) {
         const res = await axios.get(
           `https://expenseapr.onrender.com/api/transactions/get/${userId}`
         );
-        console.log(res.data);
+        
         dispatch(setExpenses(res.data));
       }     
     } catch (err) {

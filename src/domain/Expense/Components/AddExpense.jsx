@@ -13,7 +13,7 @@ const AddExpense = () => {
  
   
  
-  console.log(errors)
+  
 
 
   const HandleClick = async (data) => {
