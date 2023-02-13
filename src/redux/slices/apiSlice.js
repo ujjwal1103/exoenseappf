@@ -3,18 +3,20 @@ export const transactionApi = createApi({
   reducerPath: "transactions",
   tagTypes: ["transactions"],
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://expenseapr.onrender.com/api/transactions/",
+    baseUrl: "https://expenseapp-p9wl.onrender.com/api/transactions/",
+    mode: "cors", 
   }),
   endpoints: (builder) => ({
     getAllTransactions: builder.query({
       query: (userId) => `get/${userId}`,
       providesTags: ["transactions"],
-    }),
+    },),
     addTransaction: builder.mutation({
       query: (transaction) => ({
         url: "add/",
         method: "post",
         body: transaction,
+        
       }),
       invalidatesTags: ["transactions"],
     }),
@@ -22,13 +24,16 @@ export const transactionApi = createApi({
       query: (transactionId) => ({
         url: `/delete/${transactionId}`,
         method: "delete",
+       
       }),
       invalidatesTags: ["transactions"],
     }),
     deleteAllTransaction: builder.mutation({
       query: (userId) => ({
         url: `/transaction/${userId}`,
+      
         method: "delete",
+      
       }),
       invalidatesTags: ["transactions"],
     }),
